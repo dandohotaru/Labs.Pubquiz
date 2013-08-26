@@ -1,0 +1,30 @@
+Story:
+As a [Role]
+I want [Feature]
+So that I receive [Value]
+
+Scenario:
+Given [some initial context]
+When [an event occurs]
+Then [ensure some outcomes]
+
+
+<b>Templates<b>
+<i>Story<i>
+As a manager 
+I want to manage a repository of quiz questions
+so that i can reuse it for quiz nights
+
+<i>Scenario<i>
+Given new question with Text and Burndown
+When I submit the new question 
+Then the question is saved in the data store
+	and can be retrieved in the searches
+
+<i>Scenario<i>
+Given existing question with Text and Burndown
+When I submit the existing question 
+Then the question is saved in the data store
+	and can be retrieved in the searches
+	
+[...]
