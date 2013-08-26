@@ -1,42 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Labs.Pubquiz.Domain.Games.Answer">
-    <Position X="3" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAQQAAAA=</HashCode>
-      <FileName>Games\Answer.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Player" />
-      <Property Name="Question" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Game">
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Game">
     <Position X="1.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIACAAAAKAAAAAAAAAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
-      <FileName>Games\Game.cs</FileName>
+      <FileName>Games\Entities\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Rounds" />
       <Property Name="Teams" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Player">
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Team">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAQAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Games\Entities\Team.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Players" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Player">
     <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAgCAAAAAAAAEAAAAAAAAAA=</HashCode>
-      <FileName>Games\Player.cs</FileName>
+      <FileName>Games\Entities\Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Team" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Question">
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Round">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Games\Entities\Round.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Question">
     <Position X="3" Y="4.5" Width="1.5" />
+    <AssociationLine Name="Answers" Type="Labs.Pubquiz.Domain.Games.Entities.Answer">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.557" Y="0.143" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAYAAAA=</HashCode>
-      <FileName>Games\Question.cs</FileName>
+      <FileName>Games\Entities\Question.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Round" />
@@ -45,25 +56,16 @@
       <Property Name="Answers" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Round">
-    <Position X="3" Y="2.5" Width="1.5" />
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Answer">
+    <Position X="3" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
-      <FileName>Games\Round.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAQQAAAA=</HashCode>
+      <FileName>Games\Entities\Answer.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Questions" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Team">
-    <Position X="6.75" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAQAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Games\Team.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Players" />
-    </ShowAsCollectionAssociation>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+      <Property Name="Question" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

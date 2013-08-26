@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs.Pubquiz.Domain.Security
+namespace Labs.Pubquiz.Domain.Security.Entities
 {
     public interface IProfile
     {

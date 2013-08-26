@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs.Pubquiz.Domain.Common
+namespace Labs.Pubquiz.Domain.Common.Entities
 {
     public class Entity : IEntity
     {

@@ -1,57 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Labs.Pubquiz.Domain.Security.Profile">
-    <Position X="5.5" Y="2.25" Width="1.5" />
+  <Class Name="Labs.Pubquiz.Domain.Security.Entities.Role">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Security\Entities\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs.Pubquiz.Domain.Security.Entities.Profile">
+    <Position X="4" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAAAAAAAA=</HashCode>
-      <FileName>Security\Profile.cs</FileName>
+      <FileName>Security\Entities\Profile.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Security.FacebookProfile">
-    <Position X="7.75" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Security\Profile.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Security.LinkedinProfile">
-    <Position X="3.25" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Security\Profile.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Security.TwitterProfile">
-    <Position X="5.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
-      <FileName>Security\Profile.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Security.Role">
-    <Position X="2.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Security\Role.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Security.User">
-    <Position X="2.25" Y="2.25" Width="1.5" />
+  <Class Name="Labs.Pubquiz.Domain.Security.Entities.User">
+    <Position X="0.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAgAAAAAAAAAAAgAAAAAAAQAAAAAAAAg=</HashCode>
-      <FileName>Security\User.cs</FileName>
+      <FileName>Security\Entities\User.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Roles" />
       <Property Name="Profiles" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Interface Name="Labs.Pubquiz.Domain.Security.IProfile">
-    <Position X="5.5" Y="0.5" Width="1.5" />
+  <Class Name="Labs.Pubquiz.Domain.Security.Entities.TwitterProfile">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Security\Entities\Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs.Pubquiz.Domain.Security.Entities.FacebookProfile">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Security\Entities\Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs.Pubquiz.Domain.Security.Entities.LinkedinProfile">
+    <Position X="1.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Security\Entities\Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Labs.Pubquiz.Domain.Security.Entities.IProfile">
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
-      <FileName>Security\IProfile.cs</FileName>
+      <FileName>Security\Entities\IProfile.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
