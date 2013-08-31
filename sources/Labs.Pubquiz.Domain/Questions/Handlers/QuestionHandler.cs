@@ -1,5 +1,4 @@
-﻿using System;
-using Labs.Pubquiz.Domain.Common.Adapters;
+﻿using Labs.Pubquiz.Domain.Common.Adapters;
 using Labs.Pubquiz.Domain.Common.Exceptions;
 using Labs.Pubquiz.Domain.Common.Handlers;
 using Labs.Pubquiz.Domain.Questions.Commands;
@@ -23,7 +22,7 @@ namespace Labs.Pubquiz.Domain.Questions.Handlers
         {
             var question = Context.Find<Question>(command.QuestionId);
             if (question != null)
-                throw new BusinessException("The provided Question {0} already exists in data store.", command.QuestionId);
+                throw new BusinessException("The provided Question ({0}) already exists in data store.", command.QuestionId);
 
             question = new Question()
                 .WithId(command.QuestionId)
@@ -36,14 +35,20 @@ namespace Labs.Pubquiz.Domain.Questions.Handlers
         {
             var question = Context.Find<Tag>(command.QuestionId);
             if (question == null)
-                throw new BusinessException("The provided Question {0} does not exists in data store.", command.QuestionId);
+                throw new BusinessException("The provided Question ({0}) does not exists in data store.", command.QuestionId);
 
             Context.Remove(question);
         }
 
         public void Handle(ModifyQuestionCommand command)
         {
-            throw new NotImplementedException("ToDo");
+            var question = Context.Find<Question>(command.QuestionId);
+            if (question == null)
+                throw new BusinessException("The provided Question ({0}) does not exists in data store.", command.QuestionId);
+
+            question.ApplyText(command.Text);
+
+            Context.Add(question);
         }
     }
 }
