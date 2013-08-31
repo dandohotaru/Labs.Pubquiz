@@ -1,22 +1,34 @@
 ﻿using System;
-using Labs.Pubquiz.Domain.Common.Exceptions;
 
 namespace Labs.Pubquiz.Domain.Common.Entities
 {
     public class Entity<TEntity> : Entity
         where TEntity : class, IEntity
     {
-        public TEntity WithId(Guid id)
+        public bool Equals(TEntity other)
         {
-            if (id == default(Guid))
-                throw new BusinessException("The {0} id is required.", typeof (TEntity).Name);
-            Id = id;
-            return this as TEntity;
+            return Id.Equals(other.Id);
+        }
+
+        public override bool Equals(object other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            if (other.GetType() != GetType())
+                return false;
+            return Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode();
         }
     }
 
     public class Entity : IEntity
     {
-        public Guid Id { get; protected set; }
+        public Guid Id { get; set; }
     }
 }

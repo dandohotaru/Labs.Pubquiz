@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2B50CA4-ED8A-419A-8135-0E81E37AFC1F}</ProjectGuid>
+    <ProjectGuid>{E9C76515-4355-4C81-8BF3-0B68127D9261}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Labs.Pubquiz.Reports</RootNamespace>
-    <AssemblyName>Labs.Pubquiz.Reports</AssemblyName>
+    <RootNamespace>Labs.Pubquiz.Tests</RootNamespace>
+    <AssemblyName>Labs.Pubquiz.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,10 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\IResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Standings\Player.cs" />
-    <Compile Include="Standings\Leaderboard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

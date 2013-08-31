@@ -24,9 +24,11 @@ namespace Labs.Pubquiz.Domain.Questions.Handlers
             if (question != null)
                 throw new BusinessException("The provided Question ({0}) already exists in data store.", command.QuestionId);
 
-            question = new Question()
-                .WithId(command.QuestionId)
-                .ApplyText(command.Text);
+            question = new Question
+                           {
+                               Id = command.QuestionId,
+                               Text = command.Text,
+                           };
 
             Context.Add(question);
         }
@@ -46,7 +48,7 @@ namespace Labs.Pubquiz.Domain.Questions.Handlers
             if (question == null)
                 throw new BusinessException("The provided Question ({0}) does not exists in data store.", command.QuestionId);
 
-            question.ApplyText(command.Text);
+            question.Text = command.Text;
 
             Context.Add(question);
         }
