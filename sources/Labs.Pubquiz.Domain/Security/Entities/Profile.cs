@@ -4,7 +4,7 @@ using Labs.Pubquiz.Domain.Common.Entities;
 
 namespace Labs.Pubquiz.Domain.Security.Entities
 {
-    public class Profile : Entity, IProfile
+    public class Profile : Entity<Profile>, IProfile
     {
         public string UserName { get; set; }
 

@@ -3,7 +3,10 @@ using Labs.Pubquiz.Domain.Common.Entities;
 
 namespace Labs.Pubquiz.Domain.Questions.Entities
 {
-    public class Tag : Entity
+    /// <summary>
+    ///   A label attached to a question for the purpose of identification or to give other information.
+    /// </summary>
+    public class Tag : Entity<Tag>
     {
         public string Name { get; set; }
 

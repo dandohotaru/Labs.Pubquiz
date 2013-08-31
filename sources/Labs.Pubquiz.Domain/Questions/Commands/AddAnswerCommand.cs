@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Labs.Pubquiz.Domain.Common.Commands;
 
 namespace Labs.Pubquiz.Domain.Questions.Commands
 {
     [DataContract]
-    public class AddQuestionCommand : Command<AddQuestionCommand>
+    public class AddAnswerCommand : Command<AddAnswerCommand>
     {
+        [DataMember]
+        public Guid AnswerId { get; set; }
+
         [DataMember]
         public Guid QuestionId { get; set; }
 
@@ -15,6 +17,6 @@ namespace Labs.Pubquiz.Domain.Questions.Commands
         public string Text { get; set; }
 
         [DataMember]
-        public List<string> Tags { get; set; }
+        public bool Correct { get; set; }
     }
 }

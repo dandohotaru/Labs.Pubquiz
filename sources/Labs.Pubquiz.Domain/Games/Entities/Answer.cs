@@ -7,7 +7,7 @@ namespace Labs.Pubquiz.Domain.Games.Entities
     /// <summary>
     ///   An option to a question in a quiz.
     /// </summary>
-    public class Answer : Entity
+    public class Answer : Entity<Answer>
     {
         public Guid ReferenceId { get; set; }
 

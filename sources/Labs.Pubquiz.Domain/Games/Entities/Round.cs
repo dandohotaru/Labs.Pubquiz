@@ -7,7 +7,7 @@ namespace Labs.Pubquiz.Domain.Games.Entities
     /// <summary>
     ///   A division of a contest such as a quiz game.
     /// </summary>
-    public class Round : Entity
+    public class Round : Entity<Round>
     {
         public string Name { get; set; }
 

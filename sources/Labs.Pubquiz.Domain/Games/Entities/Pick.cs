@@ -6,7 +6,7 @@ namespace Labs.Pubquiz.Domain.Games.Entities
     /// <summary>
     ///   An act of selecting something from among a group of alternatives.
     /// </summary>
-    public class Pick : Entity
+    public class Pick : Entity<Pick>
     {
         public Guid PlayerId { get; set; }
 

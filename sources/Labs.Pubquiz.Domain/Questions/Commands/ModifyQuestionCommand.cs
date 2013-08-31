@@ -6,7 +6,7 @@ using Labs.Pubquiz.Domain.Common.Commands;
 namespace Labs.Pubquiz.Domain.Questions.Commands
 {
     [DataContract]
-    public class AddQuestionCommand : Command<AddQuestionCommand>
+    public class ModifyQuestionCommand : Command<ModifyQuestionCommand>
     {
         [DataMember]
         public Guid QuestionId { get; set; }
