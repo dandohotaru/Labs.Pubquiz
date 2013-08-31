@@ -1,71 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Labs.Pubquiz.Domain.Games.Entities.Game">
-    <Position X="1.25" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIACAAAAKAAAAAAAAAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AAIAAAAEACAAAAAAAEAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Games\Entities\Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Rounds" />
-      <Property Name="Teams" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Team">
-    <Position X="6.75" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAQAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Games\Entities\Team.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Players" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Labs.Pubquiz.Domain.Games.Entities.Player">
-    <Position X="5.25" Y="2.5" Width="1.5" />
+    <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAAAAgCAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Games\Entities\Player.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Team" />
-    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Picks" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Labs.Pubquiz.Domain.Games.Entities.Round">
-    <Position X="3" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAQAAAgAAAAkAAAAAAAAAAA=</HashCode>
       <FileName>Games\Entities\Round.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Game" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Questions" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Labs.Pubquiz.Domain.Games.Entities.Question">
-    <Position X="3" Y="4.5" Width="1.5" />
-    <AssociationLine Name="Answers" Type="Labs.Pubquiz.Domain.Games.Entities.Answer">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <AssociationLine Name="Picks" Type="Labs.Pubquiz.Domain.Games.Entities.Pick" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.062" Y="3.5" />
+        <Point X="4.062" Y="1.688" />
+        <Point X="4.5" Y="1.688" />
+      </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.557" Y="0.143" />
+        <Position X="0.039" Y="0.11" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="Answers" Type="Labs.Pubquiz.Domain.Games.Entities.Answer" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="4.5" />
+        <Point X="6.25" Y="4.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAYAAAA=</HashCode>
+      <HashCode>AAAAAIgAAAAAAAAAAAAAAAAAAAAEAAAgQAAAAAIAAAA=</HashCode>
       <FileName>Games\Entities\Question.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Round" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
+      <Property Name="Picks" />
       <Property Name="Answers" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Answer">
-    <Position X="3" Y="6.5" Width="1.5" />
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Pick">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Question" Type="Labs.Pubquiz.Domain.Games.Entities.Question" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="0.938" />
+        <Point X="3.625" Y="0.938" />
+        <Point X="3.625" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Answer" Type="Labs.Pubquiz.Domain.Games.Entities.Answer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.562" />
+        <Point X="6.719" Y="1.562" />
+        <Point X="6.719" Y="3.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.838" Y="0.143" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAQQAAAA=</HashCode>
-      <FileName>Games\Entities\Answer.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAwQAAAA=</HashCode>
+      <FileName>Games\Entities\Pick.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Player" />
       <Property Name="Question" />
+      <Property Name="Answer" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Labs.Pubquiz.Domain.Games.Entities.Answer">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQAAAA=</HashCode>
+      <FileName>Games\Entities\Answer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Question" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Picks" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

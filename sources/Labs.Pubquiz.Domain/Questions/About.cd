@@ -1,37 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Labs.Pubquiz.Domain.Templates.Answer">
+  <Class Name="Labs.Pubquiz.Domain.Questions.Entities.Answer">
     <Position X="4" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAACAAIAAA=</HashCode>
-      <FileName>Templates\Entities\Answer.cs</FileName>
+      <FileName>Questions\Entities\Answer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Templates.Question">
+  <Class Name="Labs.Pubquiz.Domain.Questions.Entities.Question">
     <Position X="1.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQQAACAAAAAA=</HashCode>
-      <FileName>Templates\Entities\Question.cs</FileName>
+      <FileName>Questions\Entities\Question.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Answers" />
       <Property Name="Tags" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Labs.Pubquiz.Domain.Templates.Tag">
+  <Class Name="Labs.Pubquiz.Domain.Questions.Entities.Tag">
     <Position X="4" Y="1.25" Width="1.5" />
-    <AssociationLine Name="Children" Type="Labs.Pubquiz.Domain.Templates.Tag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4.375" Y="2.483" />
-        <Point X="4.375" Y="2.847" />
-        <Point X="5.25" Y="2.847" />
-        <Point X="5.25" Y="2.483" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.836" Y="0.162" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Parent" Type="Labs.Pubquiz.Domain.Templates.Tag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="Parent" Type="Labs.Pubquiz.Domain.Questions.Entities.Tag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="4.528" Y="1.25" />
         <Point X="4.528" Y="0.677" />
@@ -42,9 +31,20 @@
         <Position X="-0.713" Y="0.237" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="Children" Type="Labs.Pubquiz.Domain.Questions.Entities.Tag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="2.483" />
+        <Point X="4.375" Y="2.847" />
+        <Point X="5.25" Y="2.847" />
+        <Point X="5.25" Y="2.483" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.836" Y="0.162" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Templates\Entities\Tag.cs</FileName>
+      <FileName>Questions\Entities\Tag.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Parent" />

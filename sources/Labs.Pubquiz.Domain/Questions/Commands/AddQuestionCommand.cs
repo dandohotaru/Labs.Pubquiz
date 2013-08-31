@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Labs.Pubquiz.Domain.Common.Commands;
 
-namespace Labs.Pubquiz.Domain.Templates.Commands
+namespace Labs.Pubquiz.Domain.Questions.Commands
 {
     public class AddQuestionCommand : Command<AddQuestionCommand>
     {
