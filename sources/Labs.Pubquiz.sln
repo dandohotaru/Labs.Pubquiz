@@ -17,6 +17,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs.Pubquiz.Storage.Efw", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs.Pubquiz.Storage.Rdb", "Labs.Pubquiz.Storage.Rdb\Labs.Pubquiz.Storage.Rdb.csproj", "{4EEDA5AE-451C-4856-8707-FA140438BE3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs.Pubquiz.Adapters", "Labs.Pubquiz.Adapters\Labs.Pubquiz.Adapters.csproj", "{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{11BB81D1-9F73-4A11-B8EB-6309FB6F169C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +52,10 @@ Global
 		{4EEDA5AE-451C-4856-8707-FA140438BE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EEDA5AE-451C-4856-8707-FA140438BE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EEDA5AE-451C-4856-8707-FA140438BE3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +63,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{192117ED-95BD-47CC-BB05-C29E6CE76B13} = {5E363606-185E-4903-BEFF-4B149AAAEF75}
 		{4EEDA5AE-451C-4856-8707-FA140438BE3F} = {5E363606-185E-4903-BEFF-4B149AAAEF75}
+		{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE} = {5E363606-185E-4903-BEFF-4B149AAAEF75}
 		{CBC59E01-3C4F-4271-8CB2-C23E769C3535} = {2D1AA147-25E0-42E4-AD24-E1231716ECDF}
 		{E2B50CA4-ED8A-419A-8135-0E81E37AFC1F} = {2D1AA147-25E0-42E4-AD24-E1231716ECDF}
 		{E9C76515-4355-4C81-8BF3-0B68127D9261} = {5EC3AB1C-E7BD-402E-B225-25F5EE956D63}

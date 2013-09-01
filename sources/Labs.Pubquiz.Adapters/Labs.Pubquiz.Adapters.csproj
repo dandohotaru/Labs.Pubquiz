@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{192117ED-95BD-47CC-BB05-C29E6CE76B13}</ProjectGuid>
+    <ProjectGuid>{8758DDD9-4AEF-4D45-AB48-E4A3C67E6BAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Labs.Pubquiz.Storage.Efw</RootNamespace>
-    <AssemblyName>Labs.Pubquiz.Storage.Efw</AssemblyName>
+    <RootNamespace>Labs.Pubquiz.Adapters</RootNamespace>
+    <AssemblyName>Labs.Pubquiz.Adapters</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -46,31 +51,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexts\SqlStorage.cs" />
-    <Compile Include="Mappings\Games\AnswerMap.cs" />
-    <Compile Include="Mappings\Games\GameMap.cs" />
-    <Compile Include="Mappings\Games\RoundMap.cs" />
-    <Compile Include="Mappings\Games\PlayerMap.cs" />
-    <Compile Include="Mappings\Games\PickMap.cs" />
-    <Compile Include="Mappings\Games\QuestionMap.cs" />
-    <Compile Include="Mappings\Questions\AnswerMap.cs" />
-    <Compile Include="Mappings\Questions\QuestionMap.cs" />
-    <Compile Include="Mappings\Questions\TagMap.cs" />
-    <Compile Include="Mappings\Security\UserMap.cs" />
-    <Compile Include="Mappings\Security\RoleMap.cs" />
+    <Compile Include="Dispatchers\WriteDispatcher.cs" />
+    <Compile Include="Bootstrap\NinjectLocator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Caching\" />
+    <Folder Include="Logging\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Labs.Pubquiz.Domain\Labs.Pubquiz.Domain.csproj">
       <Project>{cbc59e01-3c4f-4271-8cb2-c23e769c3535}</Project>
       <Name>Labs.Pubquiz.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Labs.Pubquiz.Reports\Labs.Pubquiz.Reports.csproj">
+      <Project>{e2b50ca4-ed8a-419a-8135-0e81e37afc1f}</Project>
+      <Name>Labs.Pubquiz.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labs.Pubquiz.Storage.Efw\Labs.Pubquiz.Storage.Efw.csproj">
+      <Project>{192117ed-95bd-47cc-bb05-c29e6ce76b13}</Project>
+      <Name>Labs.Pubquiz.Storage.Efw</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labs.Pubquiz.Storage.Rdb\Labs.Pubquiz.Storage.Rdb.csproj">
+      <Project>{4eeda5ae-451c-4856-8707-fa140438be3f}</Project>
+      <Name>Labs.Pubquiz.Storage.Rdb</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
