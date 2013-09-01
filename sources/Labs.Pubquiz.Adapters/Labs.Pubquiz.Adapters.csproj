@@ -55,10 +55,7 @@
     <Compile Include="Bootstrap\NinjectLocator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Caching\" />
-    <Folder Include="Logging\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Labs.Pubquiz.Domain\Labs.Pubquiz.Domain.csproj">
       <Project>{cbc59e01-3c4f-4271-8cb2-c23e769c3535}</Project>

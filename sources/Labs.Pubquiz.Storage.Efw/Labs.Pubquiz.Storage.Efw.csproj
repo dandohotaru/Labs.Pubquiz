@@ -58,6 +58,11 @@
     <Compile Include="Mappings\Questions\TagMap.cs" />
     <Compile Include="Mappings\Security\UserMap.cs" />
     <Compile Include="Mappings\Security\RoleMap.cs" />
+    <Compile Include="Migrations\201309011150429_InitialCreate.cs" />
+    <Compile Include="Migrations\201309011150429_InitialCreate.Designer.cs">
+      <DependentUpon>201309011150429_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +75,14 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201309011150429_InitialCreate.resx">
+      <DependentUpon>201309011150429_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Migrations\Readme.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

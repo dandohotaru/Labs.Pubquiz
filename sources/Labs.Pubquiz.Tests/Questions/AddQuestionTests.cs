@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Labs.Pubquiz.Tests.Questions
 {
     [TestFixture]
-    public class AddQuetionTests : TestBase
+    public class AddQuestionTests : TestBase
     {
         [Test]
         public void ShouldPersistQuestionToTheUnderlyingDataStoreWhenNewQuestionIsAdded()
