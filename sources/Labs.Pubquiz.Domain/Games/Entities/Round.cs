@@ -11,11 +11,11 @@ namespace Labs.Pubquiz.Domain.Games.Entities
     {
         public string Name { get; set; }
 
-        public Guid GameId { get; set; }
+        public Guid QuizId { get; set; }
 
-        public Game Game { get; set; }
+        public Quiz Quiz { get; set; }
 
-        public IList<Question> Questions { get; set; }
+        public IList<QuizQuestion> Questions { get; set; }
 
         public bool Active { get; set; }
     }

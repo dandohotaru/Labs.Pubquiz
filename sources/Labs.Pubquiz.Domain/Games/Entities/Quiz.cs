@@ -7,7 +7,7 @@ namespace Labs.Pubquiz.Domain.Games.Entities
     /// <summary>
     ///   A form of competitive activity one played according to rules and decided by skills strengths or luck.
     /// </summary>
-    public class Game : Entity<Game>
+    public class Quiz : Entity<Quiz>
     {
         public string Name { get; set; }
 
@@ -19,6 +19,6 @@ namespace Labs.Pubquiz.Domain.Games.Entities
 
         public IList<Round> Rounds { get; set; }
 
-        public GameStatus Status { get; set; }
+        public QuizStatus Status { get; set; }
     }
 }

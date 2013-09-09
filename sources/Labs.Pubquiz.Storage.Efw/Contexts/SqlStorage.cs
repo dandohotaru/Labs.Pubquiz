@@ -72,12 +72,12 @@ namespace Labs.Pubquiz.Storage.Efw.Contexts
             modelBuilder.Configurations.Add(new QuestionsMaps.AnswerMap());
             modelBuilder.Configurations.Add(new QuestionsMaps.TagMap());
 
-            //modelBuilder.Configurations.Add(new GamesMaps.GameMap());
-            //modelBuilder.Configurations.Add(new GamesMaps.RoundMap());
-            //modelBuilder.Configurations.Add(new GamesMaps.PlayerMap());
-            //modelBuilder.Configurations.Add(new GamesMaps.QuestionMap());
-            //modelBuilder.Configurations.Add(new GamesMaps.AnswerMap());
-            //modelBuilder.Configurations.Add(new GamesMaps.PickMap());
+            modelBuilder.Configurations.Add(new GamesMaps.QuizMap());
+            modelBuilder.Configurations.Add(new GamesMaps.RoundMap());
+            modelBuilder.Configurations.Add(new GamesMaps.PlayerMap());
+            modelBuilder.Configurations.Add(new GamesMaps.QuizQuestionMap());
+            modelBuilder.Configurations.Add(new GamesMaps.QuizAnswerMap());
+            modelBuilder.Configurations.Add(new GamesMaps.PickMap());
 
             //modelBuilder.Configurations.Add(new SecurityMaps.UserMap());
             //modelBuilder.Configurations.Add(new SecurityMaps.RoleMap());

@@ -49,11 +49,11 @@
     <Compile Include="Common\Exceptions\BusinessException.cs" />
     <Compile Include="Common\Handlers\ICommandHandler.cs" />
     <Compile Include="Games\Entities\Pick.cs" />
-    <Compile Include="Games\Entities\Game.cs" />
-    <Compile Include="Games\Entities\GameStatus.cs" />
+    <Compile Include="Games\Entities\Quiz.cs" />
+    <Compile Include="Games\Entities\QuizStatus.cs" />
     <Compile Include="Games\Entities\Player.cs" />
-    <Compile Include="Games\Entities\Answer.cs" />
-    <Compile Include="Games\Entities\Question.cs" />
+    <Compile Include="Games\Entities\QuizAnswer.cs" />
+    <Compile Include="Games\Entities\QuizQuestion.cs" />
     <Compile Include="Games\Entities\Round.cs" />
     <Compile Include="IDispatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

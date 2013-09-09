@@ -3,12 +3,12 @@ using Labs.Pubquiz.Domain.Games.Entities;
 
 namespace Labs.Pubquiz.Storage.Efw.Mappings.Games
 {
-    public class GameMap : EntityTypeConfiguration<Game>
+    public class QuizMap : EntityTypeConfiguration<Quiz>
     {
-        public GameMap()
+        public QuizMap()
         {
             // Table & Column Mappings
-            ToTable("Game", "games");
+            ToTable("Quiz", "games");
 
             // Primary Key
             HasKey(t => t.Id);

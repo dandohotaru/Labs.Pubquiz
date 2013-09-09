@@ -15,6 +15,11 @@ namespace Labs.Pubquiz.Storage.Efw.Mappings.Games
 
             // Properties
             Property(t => t.Id).HasColumnName("Id");
+
+            // Relationships
+            HasRequired(p => p.Quiz)
+                .WithMany(p => p.Rounds)
+                .HasForeignKey(p => p.QuizId);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Labs.Pubquiz.Domain.Games.Entities
     /// <summary>
     ///   A matter forming the basis of a problem requiring resolution.
     /// </summary>
-    public class Question : Entity<Question>
+    public class QuizQuestion : Entity<QuizQuestion>
     {
         public Guid ReferenceId { get; set; }
 
@@ -15,7 +15,7 @@ namespace Labs.Pubquiz.Domain.Games.Entities
 
         public Round Round { get; set; }
 
-        public IList<Answer> Answers { get; set; }
+        public IList<QuizAnswer> Answers { get; set; }
 
         public IList<Pick> Picks { get; set; }
 

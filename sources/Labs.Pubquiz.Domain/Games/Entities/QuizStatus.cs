@@ -2,7 +2,7 @@
 
 namespace Labs.Pubquiz.Domain.Games.Entities
 {
-    public enum GameStatus
+    public enum QuizStatus
     {
         [Description("Pending")]
         Pending = 0,

@@ -15,6 +15,20 @@ namespace Labs.Pubquiz.Storage.Efw.Mappings.Games
 
             // Properties
             Property(t => t.Id).HasColumnName("Id");
+
+            // Relationships
+            HasRequired(p => p.Player)
+                .WithMany(p => p.Picks)
+                .HasForeignKey(p => p.PlayerId)
+                .WillCascadeOnDelete(false);
+            HasRequired(p => p.Question)
+                .WithMany(p => p.Picks)
+                .HasForeignKey(p => p.QuestionId)
+                .WillCascadeOnDelete(false);
+            HasRequired(p => p.Answer)
+                .WithMany(p => p.Picks)
+                .HasForeignKey(p => p.AnswerId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

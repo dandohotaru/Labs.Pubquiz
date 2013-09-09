@@ -47,12 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\SqlStorage.cs" />
-    <Compile Include="Mappings\Games\AnswerMap.cs" />
-    <Compile Include="Mappings\Games\GameMap.cs" />
+    <Compile Include="Mappings\Games\QuizAnswerMap.cs" />
+    <Compile Include="Mappings\Games\QuizMap.cs" />
     <Compile Include="Mappings\Games\RoundMap.cs" />
     <Compile Include="Mappings\Games\PlayerMap.cs" />
     <Compile Include="Mappings\Games\PickMap.cs" />
-    <Compile Include="Mappings\Games\QuestionMap.cs" />
+    <Compile Include="Mappings\Games\QuizQuestionMap.cs" />
     <Compile Include="Mappings\Questions\AnswerMap.cs" />
     <Compile Include="Mappings\Questions\QuestionMap.cs" />
     <Compile Include="Mappings\Questions\TagMap.cs" />
@@ -61,6 +61,14 @@
     <Compile Include="Migrations\201309011150429_InitialCreate.cs" />
     <Compile Include="Migrations\201309011150429_InitialCreate.Designer.cs">
       <DependentUpon>201309011150429_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309091816015_AddQuizEntities.cs" />
+    <Compile Include="Migrations\201309091816015_AddQuizEntities.Designer.cs">
+      <DependentUpon>201309091816015_AddQuizEntities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309091825093_AdaptRoundKeys.cs" />
+    <Compile Include="Migrations\201309091825093_AdaptRoundKeys.Designer.cs">
+      <DependentUpon>201309091825093_AdaptRoundKeys.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +86,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201309011150429_InitialCreate.resx">
       <DependentUpon>201309011150429_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309091816015_AddQuizEntities.resx">
+      <DependentUpon>201309091816015_AddQuizEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309091825093_AdaptRoundKeys.resx">
+      <DependentUpon>201309091825093_AdaptRoundKeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
