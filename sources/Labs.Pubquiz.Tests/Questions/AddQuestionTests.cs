@@ -27,7 +27,7 @@ namespace Labs.Pubquiz.Tests.Questions
             // Then
             var query = new FindQuestionsByIdsQuery()
                 .AddQuestionIds(questionId);
-            var result = Reader.Search<FindQuestionsByIdsQuery, FindQuestionsByIdsResult>(query);
+            var result = Reader.Search(query);
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Questions, Is.Not.Null);
             Assert.That(result.Questions.Any(), Is.True);

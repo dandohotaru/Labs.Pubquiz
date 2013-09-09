@@ -24,15 +24,17 @@ namespace Labs.Pubquiz.Adapters.Dispatchers
 
         protected IKernel Resolver { get; private set; }
 
-        public TResult Search<TQuery, TResult>(TQuery query)
-            where TQuery : IQuery<TResult>
+        public TResult Search<TResult>(IQuery<TResult> query)
             where TResult : IResult
         {
             using (var context = Context())
             {
+                var type = typeof (IQueryHandler<,>).MakeGenericType(query.GetType(), typeof (TResult));
                 var parameter = new ConstructorArgument("context", context);
-                var handler = Resolver.Get<IQueryHandler<TQuery, TResult>>(parameter);
-                return handler.Handle(query);
+                var handler = (dynamic) Resolver.Get(type, parameter);
+                var result = (TResult) handler.Handle((dynamic) query);
+
+                return result;
             }
         }
     }
