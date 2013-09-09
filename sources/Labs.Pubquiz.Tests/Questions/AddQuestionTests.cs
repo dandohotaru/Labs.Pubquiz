@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using Labs.Pubquiz.Domain.Questions.Commands;
+using Labs.Pubquiz.Reports.Questions.FindQuestionsByIds;
 using Labs.Pubquiz.Tests.Common;
 using NUnit.Framework;
 
@@ -9,20 +11,27 @@ namespace Labs.Pubquiz.Tests.Questions
     public class AddQuestionTests : TestBase
     {
         [Test]
-        public void ShouldPersistQuestionToTheUnderlyingDataStoreWhenNewQuestionIsAdded()
+        public void ShouldStoreQuestionWhenNewQuestionIsAdded()
         {
             // Given
+            var questionId = Guid.NewGuid();
             var command = new AddQuestionCommand
                               {
-                                  QuestionId = Guid.NewGuid(),
+                                  QuestionId = questionId,
                                   Text = "What is the capital of Belgium?",
                               };
 
             // When
-            Dispatcher.Send(command);
+            Writer.Send(command);
 
             // Then
-            // ToDo: Implement query handlers and verify data.
+            var query = new FindQuestionsByIdsQuery()
+                .AddQuestionIds(questionId);
+            var result = Reader.Search<FindQuestionsByIdsQuery, FindQuestionsByIdsResult>(query);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Questions, Is.Not.Null);
+            Assert.That(result.Questions.Any(), Is.True);
+            result.Dump();
         }
     }
 }

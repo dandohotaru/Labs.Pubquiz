@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Labs.Pubquiz.Domain.Common.Entities;
 
-namespace Labs.Pubquiz.Domain.Common.Adapters
+namespace Labs.Pubquiz.Domain.Common
 {
     public interface IStorage : IDisposable
     {

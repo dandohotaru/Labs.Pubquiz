@@ -1,7 +1,5 @@
 ﻿using System.Linq;
-using Labs.Pubquiz.Domain.Common.Adapters;
-using Labs.Pubquiz.Domain.Common.Exceptions;
-using Labs.Pubquiz.Domain.Common.Handlers;
+using Labs.Pubquiz.Domain.Common;
 using Labs.Pubquiz.Domain.Questions.Commands;
 using Labs.Pubquiz.Domain.Questions.Entities;
 

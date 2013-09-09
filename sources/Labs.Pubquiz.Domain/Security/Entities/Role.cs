@@ -1,4 +1,4 @@
-﻿using Labs.Pubquiz.Domain.Common.Entities;
+﻿using Labs.Pubquiz.Domain.Common;
 
 namespace Labs.Pubquiz.Domain.Security.Entities
 {

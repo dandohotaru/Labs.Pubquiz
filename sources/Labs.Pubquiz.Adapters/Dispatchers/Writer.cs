@@ -1,17 +1,20 @@
 ﻿using System;
 using Labs.Pubquiz.Domain;
-using Labs.Pubquiz.Domain.Common.Adapters;
-using Labs.Pubquiz.Domain.Common.Commands;
-using Labs.Pubquiz.Domain.Common.Handlers;
+using Labs.Pubquiz.Domain.Common;
 using Ninject;
 using Ninject.Parameters;
 
 namespace Labs.Pubquiz.Adapters.Dispatchers
 {
-    public class WriteDispatcher : IDispatcher
+    public class Writer : IWriter
     {
-        public WriteDispatcher(Func<IStorage> context, IKernel resolver)
+        public Writer(Func<IStorage> context, IKernel resolver)
         {
+            if (context == null )
+                throw new ArgumentNullException("context");
+            if (resolver == null)
+                throw new ArgumentNullException("resolver");
+
             Context = context;
             Resolver = resolver;
         }
@@ -20,7 +23,8 @@ namespace Labs.Pubquiz.Adapters.Dispatchers
 
         protected IKernel Resolver { get; private set; }
 
-        public void Send<TCommand>(TCommand command) where TCommand : ICommand
+        public void Send<TCommand>(TCommand command) 
+            where TCommand : ICommand
         {
             using (var context = Context())
             {

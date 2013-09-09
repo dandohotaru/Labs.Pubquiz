@@ -1,6 +1,4 @@
-﻿using Labs.Pubquiz.Domain.Common.Commands;
-
-namespace Labs.Pubquiz.Domain.Common.Handlers
+﻿namespace Labs.Pubquiz.Domain.Common
 {
     public interface ICommandHandler<in TCommand>
         where TCommand : ICommand

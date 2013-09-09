@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using Labs.Pubquiz.Reports.Common;
 
 namespace Labs.Pubquiz.Reports.Standings
 {
     [DataContract]
-    public class Player : IResult
+    public class Player
     {
         [DataMember]
         public Guid PlayerId { get; set; }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs.Pubquiz.Domain.Common.Entities
+namespace Labs.Pubquiz.Domain.Common
 {
     public interface IEntity
     {

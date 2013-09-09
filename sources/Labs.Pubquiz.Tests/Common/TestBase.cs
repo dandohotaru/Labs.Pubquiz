@@ -2,8 +2,9 @@
 using Labs.Pubquiz.Adapters.Bootstrap;
 using Labs.Pubquiz.Adapters.Dispatchers;
 using Labs.Pubquiz.Domain;
-using Labs.Pubquiz.Domain.Common.Adapters;
-using Labs.Pubquiz.Domain.Common.Handlers;
+using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Reports;
+using Labs.Pubquiz.Reports.Common;
 using Labs.Pubquiz.Storage.Efw.Contexts;
 using Microsoft.Practices.ServiceLocation;
 using NUnit.Framework;
@@ -15,14 +16,16 @@ namespace Labs.Pubquiz.Tests.Common
     [TestFixture]
     public abstract class TestBase
     {
-        protected IDispatcher Dispatcher { get; set; }
+        protected IWriter Writer { get; private set; }
+        protected IReader Reader { get; private set; }
 
         [TestFixtureSetUp]
         public virtual void FixtureSetUp()
         {
             var kernel = new StandardKernel();
             kernel.Bind<Func<IStorage>>().ToMethod(context => (() => new SqlStorage()));
-            kernel.Bind<IDispatcher>().To<WriteDispatcher>();
+            kernel.Bind<IWriter>().To<Writer>();
+            kernel.Bind<IReader>().To<Reader>();
 
             kernel.Bind(p => p
                 .FromAssemblyContaining(typeof(ICommandHandler<>))
@@ -30,9 +33,16 @@ namespace Labs.Pubquiz.Tests.Common
                 .InheritedFrom(typeof(ICommandHandler<>))
                 .BindAllInterfaces());
 
+            kernel.Bind(p => p
+               .FromAssemblyContaining(typeof(IQueryHandler<,>))
+               .SelectAllClasses()
+               .InheritedFrom(typeof(IQueryHandler<,>))
+               .BindAllInterfaces());
+
             ServiceLocator.SetLocatorProvider(() => new NinjectLocator(kernel));
 
-            Dispatcher = kernel.Get<IDispatcher>();
+            Writer = kernel.Get<IWriter>();
+            Reader = kernel.Get<IReader>();
         }
 
         [SetUp]

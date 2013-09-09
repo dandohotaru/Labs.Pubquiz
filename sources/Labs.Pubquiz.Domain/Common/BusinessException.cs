@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs.Pubquiz.Domain.Common.Exceptions
+namespace Labs.Pubquiz.Domain.Common
 {
     public class BusinessException : Exception
     {

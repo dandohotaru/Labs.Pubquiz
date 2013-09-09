@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Labs.Pubquiz.Domain.Common.Commands;
+using Labs.Pubquiz.Domain.Common;
 
 namespace Labs.Pubquiz.Domain.Questions.Commands
 {

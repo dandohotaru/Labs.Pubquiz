@@ -1,8 +1,8 @@
-﻿using Labs.Pubquiz.Domain.Common.Commands;
+﻿using Labs.Pubquiz.Domain.Common;
 
 namespace Labs.Pubquiz.Domain
 {
-    public interface IDispatcher
+    public interface IWriter
     {
         void Send<TCommand>(TCommand command) where TCommand : ICommand;
     }

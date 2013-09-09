@@ -1,6 +1,5 @@
-﻿using Labs.Pubquiz.Domain.Common.Adapters;
-using Labs.Pubquiz.Domain.Common.Exceptions;
-using Labs.Pubquiz.Domain.Common.Handlers;
+﻿using System;
+using Labs.Pubquiz.Domain.Common;
 using Labs.Pubquiz.Domain.Questions.Commands;
 using Labs.Pubquiz.Domain.Questions.Entities;
 
@@ -13,10 +12,12 @@ namespace Labs.Pubquiz.Domain.Questions.Handlers
     {
         public QuestionHandler(IStorage context)
         {
+            if (context == null)
+                throw new ArgumentNullException("context");
             Context = context;
         }
 
-        protected IStorage Context { get; set; }
+        protected IStorage Context { get; private set; }
 
         public void Handle(AddQuestionCommand command)
         {
