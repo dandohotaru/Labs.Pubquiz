@@ -4,7 +4,6 @@ namespace Labs.Pubquiz.Reports
 {
     public interface IReader
     {
-        TResult Search<TResult>(IQuery<TResult> query)
-            where TResult : IResult;
+        TResult Process<TResult>(IQuery<TResult> query) where TResult : IResult;
     }
 }

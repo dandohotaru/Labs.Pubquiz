@@ -4,6 +4,6 @@ namespace Labs.Pubquiz.Domain
 {
     public interface IWriter
     {
-        void Send<TCommand>(TCommand command) where TCommand : ICommand;
+        void Process(ICommand command);
     }
 }

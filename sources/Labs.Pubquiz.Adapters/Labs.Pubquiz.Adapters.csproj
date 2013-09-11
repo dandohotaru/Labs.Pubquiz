@@ -51,8 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dispatchers\Reader.cs" />
-    <Compile Include="Dispatchers\Writer.cs" />
+    <Compile Include="Dispatchers\NinjectDispatcher.cs" />
     <Compile Include="Bootstrap\NinjectLocator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

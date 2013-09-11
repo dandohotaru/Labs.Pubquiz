@@ -24,8 +24,8 @@ namespace Labs.Pubquiz.Tests.Common
         {
             var kernel = new StandardKernel();
             kernel.Bind<Func<IStorage>>().ToMethod(context => (() => new SqlStorage()));
-            kernel.Bind<IWriter>().To<Writer>();
-            kernel.Bind<IReader>().To<Reader>();
+            kernel.Bind<IWriter>().To<NinjectDispatcher>();
+            kernel.Bind<IReader>().To<NinjectDispatcher>();
 
             kernel.Bind(p => p
                 .FromAssemblyContaining(typeof(ICommandHandler<>))
