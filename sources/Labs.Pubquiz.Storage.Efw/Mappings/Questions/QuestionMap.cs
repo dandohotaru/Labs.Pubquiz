@@ -20,7 +20,7 @@ namespace Labs.Pubquiz.Storage.Efw.Mappings.Questions
             HasOptional(t => t.Answers);
 
             HasMany(t => t.Tags)
-                .WithMany(t => t.Questions)
+                .WithMany()
                 .Map(m =>
                          {
                              m.ToTable("QuestionTag", "questions");

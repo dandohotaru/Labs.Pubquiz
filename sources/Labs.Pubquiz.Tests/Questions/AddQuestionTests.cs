@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Labs.Pubquiz.Domain.Questions.Commands;
 using Labs.Pubquiz.Reports.Questions.FindQuestionsByIds;
@@ -19,18 +20,17 @@ namespace Labs.Pubquiz.Tests.Questions
                               {
                                   QuestionId = questionId,
                                   Text = "What is the capital of Belgium?",
+                                  //Tags = new List<string> {"Geography", "Cities"},
                               };
 
             // When
             Writer.Process(command);
-
+            
             // Then
             var query = new FindQuestionsByIdsQuery()
                 .AddQuestionIds(questionId);
             var result = Reader.Process(query);
-            Assert.That(result, Is.Not.Null);
-            Assert.That(result.Questions, Is.Not.Null);
-            Assert.That(result.Questions.Any(), Is.True);
+            Assert.That(result.Questions.Single(p => p.Id == questionId), Is.Not.Null);
             result.Dump();
         }
     }

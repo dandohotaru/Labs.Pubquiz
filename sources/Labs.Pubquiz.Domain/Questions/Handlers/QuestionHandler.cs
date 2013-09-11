@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Labs.Pubquiz.Domain.Common;
 using Labs.Pubquiz.Domain.Questions.Commands;
 using Labs.Pubquiz.Domain.Questions.Entities;
@@ -30,6 +31,15 @@ namespace Labs.Pubquiz.Domain.Questions.Handlers
                                Id = command.QuestionId,
                                Text = command.Text,
                            };
+
+            if (command.Tags != null)
+            {
+                var tags = from tagName in command.Tags
+                           let tagId = Guid.NewGuid()
+                           let tag = new Tag(tagId, tagName)
+                           select tag;
+                question.Tags = tags.ToList();
+            }
 
             Context.Add(question);
         }
