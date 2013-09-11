@@ -1,15 +1,11 @@
 ﻿using System;
 using Labs.Pubquiz.Adapters.Bootstrap;
-using Labs.Pubquiz.Adapters.Dispatchers;
 using Labs.Pubquiz.Domain;
 using Labs.Pubquiz.Domain.Common;
 using Labs.Pubquiz.Reports;
-using Labs.Pubquiz.Reports.Common;
-using Labs.Pubquiz.Storage.Efw.Contexts;
 using Microsoft.Practices.ServiceLocation;
 using NUnit.Framework;
 using Ninject;
-using Ninject.Extensions.Conventions;
 
 namespace Labs.Pubquiz.Tests.Common
 {
@@ -22,27 +18,11 @@ namespace Labs.Pubquiz.Tests.Common
         [TestFixtureSetUp]
         public virtual void FixtureSetUp()
         {
-            var kernel = new StandardKernel();
-            kernel.Bind<Func<IStorage>>().ToMethod(context => (() => new SqlStorage()));
-            kernel.Bind<IWriter>().To<NinjectDispatcher>();
-            kernel.Bind<IReader>().To<NinjectDispatcher>();
-
-            kernel.Bind(p => p
-                .FromAssemblyContaining(typeof(ICommandHandler<>))
-                .SelectAllClasses()
-                .InheritedFrom(typeof(ICommandHandler<>))
-                .BindAllInterfaces());
-
-            kernel.Bind(p => p
-               .FromAssemblyContaining(typeof(IQueryHandler<,>))
-               .SelectAllClasses()
-               .InheritedFrom(typeof(IQueryHandler<,>))
-               .BindAllInterfaces());
-
+            var kernel = new StandardKernel(new NinjectBootstrap());
             ServiceLocator.SetLocatorProvider(() => new NinjectLocator(kernel));
 
-            Writer = kernel.Get<IWriter>();
-            Reader = kernel.Get<IReader>();
+            Writer = ServiceLocator.Current.GetInstance<IWriter>();
+            Reader = ServiceLocator.Current.GetInstance<IReader>();
         }
 
         [SetUp]
