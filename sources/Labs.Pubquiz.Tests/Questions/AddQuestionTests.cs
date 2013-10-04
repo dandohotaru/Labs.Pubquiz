@@ -17,15 +17,15 @@ namespace Labs.Pubquiz.Tests.Questions
             // Given
             var questionId = Guid.NewGuid();
             var command = new AddQuestionCommand
-                              {
-                                  QuestionId = questionId,
-                                  Text = "What is the capital of Belgium?",
-                                  //Tags = new List<string> {"Geography", "Cities"},
-                              };
+                {
+                    QuestionId = questionId,
+                    Text = "What is the capital of Belgium?",
+                    Tags = new List<string> {"Geography", "Cities"},
+                };
 
             // When
             Writer.Process(command);
-            
+
             // Then
             var query = new FindQuestionsByIdsQuery()
                 .AddQuestionIds(questionId);

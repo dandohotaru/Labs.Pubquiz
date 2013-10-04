@@ -5,13 +5,13 @@ namespace Labs.Pubquiz.Storage.Efw.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class AddQuizEntities : IMigrationMetadata
+    public sealed partial class InitialSetup : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddQuizEntities));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialSetup));
         
         string IMigrationMetadata.Id
         {
-            get { return "201309091816015_AddQuizEntities"; }
+            get { return "201310041907464_InitialSetup"; }
         }
         
         string IMigrationMetadata.Source

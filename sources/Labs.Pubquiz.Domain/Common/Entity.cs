@@ -18,7 +18,7 @@ namespace Labs.Pubquiz.Domain.Common
                 return true;
             if (other.GetType() != GetType())
                 return false;
-            return Equals(other);
+            return Equals((TEntity) other);
         }
 
         public override int GetHashCode()

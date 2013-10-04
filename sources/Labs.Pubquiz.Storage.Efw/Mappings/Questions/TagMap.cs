@@ -21,9 +21,6 @@ namespace Labs.Pubquiz.Storage.Efw.Mappings.Questions
             HasOptional(t => t.Parent)
                 .WithMany(t => t.Children)
                 .HasForeignKey(d => d.ParentId);
-            HasMany(t => t.Children)
-                .WithOptional(t => t.Parent)
-                .HasForeignKey(t => t.ParentId);
         }
     }
 }

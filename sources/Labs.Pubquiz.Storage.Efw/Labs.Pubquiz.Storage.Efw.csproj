@@ -58,17 +58,9 @@
     <Compile Include="Mappings\Questions\TagMap.cs" />
     <Compile Include="Mappings\Security\UserMap.cs" />
     <Compile Include="Mappings\Security\RoleMap.cs" />
-    <Compile Include="Migrations\201309011150429_InitialCreate.cs" />
-    <Compile Include="Migrations\201309011150429_InitialCreate.Designer.cs">
-      <DependentUpon>201309011150429_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309091816015_AddQuizEntities.cs" />
-    <Compile Include="Migrations\201309091816015_AddQuizEntities.Designer.cs">
-      <DependentUpon>201309091816015_AddQuizEntities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309091825093_AdaptRoundKeys.cs" />
-    <Compile Include="Migrations\201309091825093_AdaptRoundKeys.Designer.cs">
-      <DependentUpon>201309091825093_AdaptRoundKeys.cs</DependentUpon>
+    <Compile Include="Migrations\201310041907464_InitialSetup.cs" />
+    <Compile Include="Migrations\201310041907464_InitialSetup.Designer.cs">
+      <DependentUpon>201310041907464_InitialSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,22 +72,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201309011150429_InitialCreate.resx">
-      <DependentUpon>201309011150429_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309091816015_AddQuizEntities.resx">
-      <DependentUpon>201309091816015_AddQuizEntities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309091825093_AdaptRoundKeys.resx">
-      <DependentUpon>201309091825093_AdaptRoundKeys.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Migrations\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Migrations\Readme.txt" />
+    <EmbeddedResource Include="Migrations\201310041907464_InitialSetup.resx">
+      <DependentUpon>201310041907464_InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
