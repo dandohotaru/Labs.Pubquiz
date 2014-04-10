@@ -2,6 +2,7 @@
 using Labs.Pubquiz.Adapters.Bootstrap;
 using Labs.Pubquiz.Domain;
 using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Domain.Common.Adapters;
 using Labs.Pubquiz.Reports;
 using Microsoft.Practices.ServiceLocation;
 using NUnit.Framework;

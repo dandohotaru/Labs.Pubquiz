@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Domain.Common.Adapters;
+using Labs.Pubquiz.Domain.Common.Entities;
 using GamesMaps = Labs.Pubquiz.Storage.Efw.Mappings.Games;
 using QuestionsMaps = Labs.Pubquiz.Storage.Efw.Mappings.Questions;
 using SecurityMaps = Labs.Pubquiz.Storage.Efw.Mappings.Security;

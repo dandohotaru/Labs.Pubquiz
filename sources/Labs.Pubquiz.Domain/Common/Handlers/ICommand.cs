@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs.Pubquiz.Domain.Common
+namespace Labs.Pubquiz.Domain.Common.Handlers
 {
     public interface ICommand
     {

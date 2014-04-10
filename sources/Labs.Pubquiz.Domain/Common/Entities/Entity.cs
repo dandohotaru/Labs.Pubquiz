@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Labs.Pubquiz.Domain.Common
+namespace Labs.Pubquiz.Domain.Common.Entities
 {
     public class Entity<TEntity> : Entity
         where TEntity : class, IEntity
@@ -19,6 +19,20 @@ namespace Labs.Pubquiz.Domain.Common
             if (other.GetType() != GetType())
                 return false;
             return Equals((TEntity) other);
+        }
+
+        public static bool operator ==(Entity<TEntity> entity1, Entity<TEntity> entity2)
+        {
+            return ReferenceEquals(entity1, null)
+                       ? ReferenceEquals(entity2, null)
+                       : entity1.Equals(entity2);
+        }
+
+        public static bool operator !=(Entity<TEntity> entity1, Entity<TEntity> entity2)
+        {
+            return ReferenceEquals(entity1, null)
+                       ? !ReferenceEquals(entity2, null)
+                       : !entity1.Equals(entity2);
         }
 
         public override int GetHashCode()

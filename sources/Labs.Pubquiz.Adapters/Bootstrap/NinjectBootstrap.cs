@@ -2,6 +2,8 @@
 using Labs.Pubquiz.Adapters.Dispatchers;
 using Labs.Pubquiz.Domain;
 using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Domain.Common.Adapters;
+using Labs.Pubquiz.Domain.Common.Handlers;
 using Labs.Pubquiz.Reports;
 using Labs.Pubquiz.Reports.Common;
 using Labs.Pubquiz.Storage.Efw.Contexts;

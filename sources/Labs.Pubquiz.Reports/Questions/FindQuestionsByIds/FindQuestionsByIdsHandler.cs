@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Domain.Common.Adapters;
 using Labs.Pubquiz.Domain.Questions.Entities;
 using Labs.Pubquiz.Reports.Common;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Domain.Common.Entities;
 
 namespace Labs.Pubquiz.Domain.Questions.Entities
 {

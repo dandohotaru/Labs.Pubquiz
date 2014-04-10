@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Labs.Pubquiz.Domain.Questions.Commands;
+using Labs.Pubquiz.Domain.Questions.Handlers;
 using Labs.Pubquiz.Reports.Questions.FindQuestionsByIds;
 using Labs.Pubquiz.Tests.Common;
 using NUnit.Framework;

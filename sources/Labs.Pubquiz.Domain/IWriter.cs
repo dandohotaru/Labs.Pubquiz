@@ -1,4 +1,5 @@
 ﻿using Labs.Pubquiz.Domain.Common;
+using Labs.Pubquiz.Domain.Common.Handlers;
 
 namespace Labs.Pubquiz.Domain
 {

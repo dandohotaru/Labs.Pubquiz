@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\IStorage.cs" />
-    <Compile Include="Common\Command.cs" />
-    <Compile Include="Common\ICommand.cs" />
-    <Compile Include="Common\Entity.cs" />
-    <Compile Include="Common\IEntity.cs" />
-    <Compile Include="Common\BusinessException.cs" />
-    <Compile Include="Common\ICommandHandler.cs" />
+    <Compile Include="Common\Adapters\IStorage.cs" />
+    <Compile Include="Common\Handlers\Command.cs" />
+    <Compile Include="Common\Handlers\ICommand.cs" />
+    <Compile Include="Common\Entities\Entity.cs" />
+    <Compile Include="Common\Entities\IEntity.cs" />
+    <Compile Include="Common\Exceptions\BusinessException.cs" />
+    <Compile Include="Common\Handlers\ICommandHandler.cs" />
     <Compile Include="Games\Entities\Pick.cs" />
     <Compile Include="Games\Entities\Quiz.cs" />
     <Compile Include="Games\Entities\QuizStatus.cs" />
@@ -57,21 +57,25 @@
     <Compile Include="Games\Entities\Round.cs" />
     <Compile Include="IWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Questions\Commands\AddAnswerCommand.cs" />
-    <Compile Include="Questions\Commands\AssignTagsCommand.cs" />
-    <Compile Include="Questions\Commands\ModifyAnswerCommand.cs" />
-    <Compile Include="Questions\Commands\RemoveTagCommand.cs" />
-    <Compile Include="Questions\Commands\RenameTagCommand.cs" />
-    <Compile Include="Questions\Commands\RemoveQuestionCommand.cs" />
-    <Compile Include="Questions\Commands\ModifyQuestionCommand.cs" />
-    <Compile Include="Questions\Commands\RemoveAnswerCommand.cs" />
-    <Compile Include="Questions\Handlers\QuestionHandler.cs" />
-    <Compile Include="Questions\Handlers\AnswerHandler.cs" />
+    <Compile Include="Questions\Handlers\AddAnswerCommand.cs" />
+    <Compile Include="Questions\Handlers\AssignTagsCommand.cs" />
+    <Compile Include="Questions\Handlers\ModifyAnswerCommand.cs" />
+    <Compile Include="Questions\Handlers\RemoveTagCommand.cs" />
+    <Compile Include="Questions\Handlers\RenameTagCommand.cs" />
+    <Compile Include="Questions\Handlers\RemoveQuestionCommand.cs" />
+    <Compile Include="Questions\Handlers\ModifyQuestionCommand.cs" />
+    <Compile Include="Questions\Handlers\RemoveAnswerCommand.cs" />
+    <Compile Include="Questions\Handlers\AddQuestionHandler.cs" />
+    <Compile Include="Questions\Handlers\AddAnswerHandler.cs" />
+    <Compile Include="Questions\Handlers\ModifyAnswerHandler.cs" />
+    <Compile Include="Questions\Handlers\RemoveAnswerHandler.cs" />
+    <Compile Include="Questions\Handlers\RemoveQuestionHandler.cs" />
+    <Compile Include="Questions\Handlers\ModifyQuestionHandler.cs" />
     <Compile Include="Security\Entities\IProfile.cs" />
     <Compile Include="Security\Entities\Profile.cs" />
     <Compile Include="Security\Entities\Role.cs" />
     <Compile Include="Security\Entities\User.cs" />
-    <Compile Include="Questions\Commands\AddQuestionCommand.cs" />
+    <Compile Include="Questions\Handlers\AddQuestionCommand.cs" />
     <Compile Include="Questions\Entities\Answer.cs" />
     <Compile Include="Questions\Entities\Question.cs" />
     <Compile Include="Questions\Entities\Tag.cs" />
@@ -84,6 +88,7 @@
   <ItemGroup>
     <Folder Include="Games\Commands\" />
     <Folder Include="Games\Handlers\" />
+    <Folder Include="Questions\Messages\" />
     <Folder Include="Security\Commands\" />
     <Folder Include="Security\Handlers\" />
   </ItemGroup>

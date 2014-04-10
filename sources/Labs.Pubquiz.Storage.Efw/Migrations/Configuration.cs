@@ -8,6 +8,7 @@ namespace Labs.Pubquiz.Storage.Efw.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(SqlStorage context)

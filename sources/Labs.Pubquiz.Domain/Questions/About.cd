@@ -3,7 +3,7 @@
   <Class Name="Labs.Pubquiz.Domain.Questions.Entities.Answer">
     <Position X="4.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAAAACAQIAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAQIAAA=</HashCode>
       <FileName>Questions\Entities\Answer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -23,6 +23,9 @@
   </Class>
   <Class Name="Labs.Pubquiz.Domain.Questions.Entities.Tag">
     <Position X="4.25" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <AssociationLine Name="Parent" Type="Labs.Pubquiz.Domain.Questions.Entities.Tag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="4.778" Y="3.25" />
@@ -34,19 +37,13 @@
         <Position X="-0.713" Y="0.237" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="Children" Type="Labs.Pubquiz.Domain.Questions.Entities.Tag" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4.625" Y="4.483" />
-        <Point X="4.625" Y="4.733" />
-        <Point X="5.5" Y="4.733" />
-        <Point X="5.5" Y="4.483" />
-      </Path>
+    <AssociationLine Name="Children" Type="Labs.Pubquiz.Domain.Questions.Entities.Tag">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.836" Y="0.162" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEQAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Questions\Entities\Tag.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
